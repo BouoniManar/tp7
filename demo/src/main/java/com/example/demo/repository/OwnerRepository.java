@@ -7,5 +7,10 @@ import com.example.demo.model.Owner;
 
 @Repository
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
-    // Vous pouvez ajouter des méthodes personnalisées ici si nécessaire
+
+    default Owner getOwnerById(Long id){
+        return findById(id).orElseThrow();
+    
+    }
+  
 }

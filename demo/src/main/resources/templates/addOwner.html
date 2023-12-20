@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Owner</title>
+</head>
+<body>
+    <h1>Edit Owner</h1>
+
+    <form th:action="@{/owners/save}" method="post">
+        <input type="hidden" th:field="${owner.id}" />
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="${owner.name}" />
+
+        <label for="contactInfo">Contact Information:</label>
+        <input type="text" id="contactInfo" th:field="${owner.contactInformation}" />
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

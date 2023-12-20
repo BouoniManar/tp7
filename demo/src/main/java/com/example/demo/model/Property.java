@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import java.math.BigDecimal;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,9 +33,7 @@ public Property(long id, String address, double price) {
 }
 
 
-public Property(String string, BigDecimal valueOf) {
-  // TODO document why this constructor is empty
-}
+
 
 public long getId() {
     return id;

@@ -1,14 +1,15 @@
 package com.example.demo.service;
-
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Property;
 
-
+@Service
 public interface PropertyService {
-Property saveProperty(Property property);
-List<Property> getAllProperty();
-Property getPropertyById(long id);
-Property updateProperty(Property property, long id);
-void deleteProperty(long id);
+    List<Property> getAllProperties();
+    Property getPropertyById(Long id);
+    Property saveProperty(Property property);
+    Property updateProperty(Long id, Property property);
+    void deleteProperty(Long id);
 }
